@@ -1,0 +1,44 @@
+.btn
+	color $customblack2
+	border-radius 0
+	outline 0
+	&:hover,
+	&:link,
+	&:active,
+	&:focus,
+	&:visited,
+	&:click
+		outline 0
+	&-custom1
+		color $customwhite1
+		background-color $customred1
+		&:hover,
+		&:link,
+		&:active,
+		&:focus,
+		&:visited
+			color darken($customwhite1, 10%)
+			background-color darken($customred1, 10%)
+	&-custom2
+		color $customblack3
+		background-color $customgreen1
+		&:hover,
+		&:link,
+		&:active,
+		&:focus,
+		&:visited
+			color alpha($customblack3, 90%)
+			background-color darken($customgreen1, 10%)
+	&-custom3
+		color $customblack3
+		background-color $customyellow2
+		&:hover,
+		&:link,
+		&:active,
+		&:focus,
+		&:visited
+			color alpha($customblack3, 90%)
+			background-color darken($customyellow2, 10%)
+
+
+		
