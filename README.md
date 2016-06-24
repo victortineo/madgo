@@ -1,13 +1,18 @@
 # Boilerplate Frontend
 
-Usar esse boilerplate para todos os novos projetos web.
+- Usar esse boilerplate para todos os novos projetos web.
 
-# Como usar
+# Requisitos
 
-Ter instalado em sua maquina Node.js e Gulp.
-Clone este repositorio para sua maquina, ele agora e sua pasta principal.
+- Node.js
+- Bower
+- Gulp
 
-# Iniciar projeto
+# Como usar - Passo 1
+
+- Clone este repositorio para sua maquina, ele agora e sua pasta principal.
+
+# Iniciar projeto - Passo 2
 - npm install
 
 # Dependencias 
@@ -20,6 +25,9 @@ Clone este repositorio para sua maquina, ele agora e sua pasta principal.
 - gulp-minify
 - gulp-stylus
 
-# Tarefas
-gulp watch - [Compilar stylus para css]
-gulp build - [Compilar a versao otimizada do projeto]
+# Tarefas - Passo 3
+- gulp watch - [Compilar stylus para css]
+- gulp build - [Compilar a versao otimizada do projeto]
+
+# Outros
+- Instalar bibliotecas com Bower
