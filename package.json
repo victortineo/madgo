@@ -29,6 +29,7 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-minify": "0.0.12",
+    "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.4.0"
   }
 }
