@@ -1,5 +1,4 @@
 .btn
-	color $customblack2
 	border-radius 0
 	outline 0
 	&:hover,
@@ -10,35 +9,13 @@
 	&:click
 		outline 0
 	&-custom1
+		padding 0 50px
 		color $customwhite1
-		background-color $customred1
+		background-color $customblack2
+		transition (.2s all ease-in)
 		&:hover,
-		&:link,
-		&:active,
 		&:focus,
-		&:visited
-			color darken($customwhite1, 10%)
-			background-color darken($customred1, 10%)
-	&-custom2
-		color $customblack3
-		background-color $customgreen1
-		&:hover,
-		&:link,
 		&:active,
-		&:focus,
 		&:visited
-			color alpha($customblack3, 90%)
-			background-color darken($customgreen1, 10%)
-	&-custom3
-		color $customblack3
-		background-color $customyellow2
-		&:hover,
-		&:link,
-		&:active,
-		&:focus,
-		&:visited
-			color alpha($customblack3, 90%)
-			background-color darken($customyellow2, 10%)
-
-
-		
+			color $customwhite1
+			border-left 1px solid $customwhite1

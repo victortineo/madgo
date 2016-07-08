@@ -1,14 +1,18 @@
 $(document).ready(function(){
 setTimeout(function(){
-	// Scroll effect ancor
+	// Scroll effect ancor with scrollspy wordpress
 	$('.link-animation').find('a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname ==      this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: (target.offset().top) - 64
+          scrollTop: (target.offset().top) - 78
         }, 1000);
+  		// $('.link-animation').find('li').each(function(index, el) {
+		// $(this).removeClass('active')
+		// });
+		// $(this).parent('li').addClass('active');
         return false;
       }
     }
@@ -41,9 +45,15 @@ setTimeout(function(){
 		}
 	});
 	// Fecha o menu ao clicar no link
-	$('.navbar-collapse ul li a').click(function() {
-	    $('.navbar-toggle:visible').click();
+	$('#menu-list li a').click(function() {
+		$('.navbar .menu').removeClass("active");
 	});
+	$('.navbar').on('mouseleave', function (e) {    
+		if ($(e.target).closest('.active').length){
+		$('.navbar .menu').removeClass("active");
+		}
+	});
+
 	// Aparecer postit ao rolar a pagina
 	$( window ).scroll(function() {
 		var $objt = $( ".postit" );
