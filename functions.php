@@ -18,7 +18,7 @@ function remove_menus(){
   //remove_menu_page( 'edit.php' );                   //Posts
   remove_menu_page( 'upload.php' );                 //Media
   //remove_menu_page( 'edit.php?post_type=page' );    //Pages
-  remove_menu_page( 'edit-comments.php' );          //Comments
+  // remove_menu_page( 'edit-comments.php' );          //Comments
   //remove_menu_page( 'themes.php' );                 //Appearance
   //remove_menu_page( 'plugins.php' );                //Plugins
   //remove_menu_page( 'users.php' );                  //Users
@@ -43,42 +43,10 @@ function  cc_mime_types ( $mimes )  {
 } 
 add_filter ( 'upload_mimes' ,  'cc_mime_types' ) ;
 
-// //Deletes all CSS classes and id's, except for those listed in the array below
-// function custom_wp_nav_menu($var) {
-//         return is_array($var) ? array_intersect($var, array(
-//                 //List of allowed menu classes
-//                 'current_page_item',
-//                 'current_page_parent',
-//                 'current_page_ancestor',
-//                 'first',
-//                 'last',
-//                 'vertical',
-//                 'horizontal'
-//                 )
-//         ) : '';
-// }
-// add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
-// add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
-// add_filter('page_css_class', 'custom_wp_nav_menu');
- 
-// //Replaces "current-menu-item" with "active"
-// function current_to_active($text){
-//         $replace = array(
-//                 //List of menu item classes that should be changed to "active"
-//                 'current_page_item' => null,
-//                 'current_page_parent' => null,
-//                 'current_page_ancestor' => null,
-//         );
-//         $text = str_replace(array_keys($replace), $replace, $text);
-//                 return $text;
-//         }
-// add_filter ('wp_nav_menu','current_to_active');
- 
-// //Deletes empty classes and removes the sub menu class
-// function strip_empty_classes($menu) {
-//     $menu = preg_replace('/ class=""| class="sub-menu"/','',$menu);
-//     return $menu;
-// }
-// add_filter ('wp_nav_menu','strip_empty_classes');
-
+function activate_comments_for_pages( $status, $post_type, $comment_type ) {
+if( 'post' !== $post_type ) {return $status;}
+if( 'page' !== $post_type ) {return $status;}
+return 'open';
+}
+add_filter( 'get_default_comment_status', 'activate_comments_for_pages', 10, 3 );
 ?>
