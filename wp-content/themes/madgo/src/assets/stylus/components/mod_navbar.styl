@@ -1,0 +1,139 @@
+// Navbar
+#mod_navbar2
+	position fixed
+	top 0
+	left 0
+	right 0
+	border-radius 0
+	border 0
+	margin 0 auto
+	z-index 20
+	transition(.2s all ease-in)
+	min-height 78px
+	background-color $customwhite1
+	.navbar-wrapper
+		max-width 1024px
+	@media mqtablet-md
+		top 0
+		padding 0 15px
+	@media mqdesktop
+		&-wrapper
+			max-width 1024px
+	.branding
+		text-align center
+		display block
+		padding 0
+		@media mqmobile-md
+			img
+				max-width 47%
+	.glyphicon
+		color $customred1
+	&.navbar-shrink
+		position fixed
+		top 0
+		left 0
+		right 0
+		padding 0 15px 0 15px
+		border 0
+		z-index 2
+		background-color $customwhite1
+	.menu
+		ul
+			float right
+			margin 0 auto
+			padding 0
+			list-style none
+			@extend .inline-block
+			@media mqtablet-md
+				float none
+			li
+				@extend .inline-block
+				padding-right 10px
+				&:last-child
+					padding-right 0
+				&.active
+					a
+						color $customred1
+						background-color transparent
+						border-top 3px solid $customred1
+						@media mqtablet-md
+							border 0
+				a
+					font-weight 400
+					text-decoration none
+					padding 27px 10px
+					@media mqtablet-md
+						padding 0 5px
+		&__list
+			text-align center
+			li
+				a 
+					font-size 14px
+					color $customblack3
+					transition .2s color linear
+					-webkit-transition .2s color linear
+					border-top 0px solid transparent
+					transition(.2s all ease-in)
+					@media mqtablet-md
+						color $customred1
+					&:hover
+						color $customred1
+					&:active
+						font-weight 700
+		&__icons
+			li
+				padding 24px 5px
+				a
+					span[class^="icon-"], span[class*=" icon-"]
+						font-size 20px
+						color corIconSocial
+						transition 1s all linear
+						-webkit-transition 1s all linear
+						&:hover
+							color roxo
+		@media mqtablet-md
+			width 100%
+			max-height 0
+			overflow hidden
+			-webkit-transition 1s all linear
+			transition .5s all linear
+			transition-delay .5s
+			.separetor
+				display block
+				border 1px solid gray
+				&:after
+					padding 0
+					font-size 0
+					content ''
+			.col-xs-12
+				width 100%
+			ul
+				display block
+				text-align center
+				max-height 0
+				overflow hidden
+				-webkit-transition 1s all linear
+				transition 1s all linear
+				li
+					display block
+					width 100%
+					padding 5px 5px
+					margin 5px 0
+					a
+						font-size 16px
+			.menu__icons
+				padding-bottom 5px
+				li
+					display inline-block
+			&.active
+				max-height 100vh
+				ul
+					max-height 100vh
+	.menu-collapse
+		font-size 0
+		padding 0
+		cursor pointer
+	@media mqtablet-md
+		.menu-collapse
+			font-size 24px
+			padding 14px 0

@@ -1,0 +1,367 @@
+/**************************
+*** HERO
+**************************/
+/*FUNDO+LOGO*/
+.hero 
+	background-image url('.././img/bg-madgo-blog.jpg')
+	background-position center center
+	background-size cover
+	background-repeat no-repeat
+	padding 80px 0
+/*HERO-CONTENT*/
+.hero-content 
+	background-color $customblack2
+	color $customwhite1
+	font-size 18px
+	font-weight 100
+	text-transform uppercase
+	margin-bottom 13px
+	padding 15px 0
+	h2
+		line-height 1.5
+		margin 0
+	strong
+		font-weight 700
+	
+/**************************
+*** BLOG
+**************************/
+.blog
+	padding 50px 15px
+	@media mqmobile-md
+		text-align center
+	.page-header 
+		padding 0 0 25px 0
+		text-align left
+		@media mqmobile-md
+			text-align center
+		h1 
+			font-size 32px
+			font-weight bold
+			text-transform uppercase
+			color $customred2
+			@media mqmobile-md
+				font-size 24px
+			span 
+				border-bottom 5px solid $customblack3
+	p
+		padding 0
+		margin-bottom 15px
+		letter-spacing .2px
+	li
+		margin 5px 0
+	strong
+		font-weight 700
+	b
+		font-weight 600
+	img
+		max-width 100%
+		height auto
+	.post-preview
+		padding-bottom 20px
+		.post-thumbnail
+			overflow hidden
+			zoom 1
+			min-height 210px
+			background-size cover
+			background-position center center
+			background-repeat no-repeat
+			margin 15px 0
+			transition(.2s all ease-in)
+			border 0 solid transparent
+			&:hover
+				border 15px solid transparent
+		.post-content
+			padding 5px 15px
+			background-color $customwhite1
+			h1
+				padding 0
+				margin 0
+				font-size 22px
+				font-weight 400
+				color $customblack4
+				@media mqmobile-md
+					font-size 18px
+			a
+				font-weight 600
+				color $customblack4
+				text-decoration none
+				&:hover
+					color alpha($customblack1, 50%)
+			p 
+				padding 15px 0
+				margin 0
+				font-size 14px
+				font-weight 400
+				color $customgray3
+			@media screen and (max-width 768px)
+				text-align center
+	.post-excerpt
+		text-align center
+		padding 0 15px
+		border-right 1px solid $customgray4
+		.glyphicon
+			padding-right 10px
+		span
+			font-size 14px
+			font-weight 400
+			color $customgray4
+		b
+			color $customblack1
+			font-weight 400			
+		.day
+			font-size 32px
+			font-weight 700
+			margin 0 
+			padding 0
+			@media mqmobile-md
+				font-size 32px
+		.date
+			font-weight 700
+		strong
+			padding-top 15px
+			font-size 15px
+			font-weight 700
+			color gray
+			text-transform uppercase
+		@media screen and (max-width 768px)
+			text-align center
+	.pagenavi
+		text-align center
+	.sidebar
+		text-align center
+		color white
+		header
+			margin-top 15px
+			padding 15px
+			text-align center
+			background-color $customblack4
+			h1
+				margin 0
+				padding 0
+				font-size 16px
+				font-weight 400
+				color $customwhite1
+				text-transform uppercase
+		&.newsletter
+			padding 0
+			background-color $customred2
+			.btn
+				color $customwhite1
+				font-weight 400
+				padding 7px 0
+				margin-top 10px
+			.content
+				padding 15px
+		&.socials
+			img
+				padding-top 15px
+		&.views
+			color $customwhite1
+			font-size 12px
+			ul li
+				padding-right 0
+				border-bottom 1px solid $customgray3
+				a
+					padding-right 3px
+			span
+				padding 5px 3px 3px 10px
+			.counts
+				padding 1px 2px
+			.title
+				padding 0
+				margin-bottom 30px
+			.bg-view
+				background-size cover
+				background-position center
+				background-repeat no-repeat
+				min-height 70px
+			.views-count
+				position absolute
+				top -20%
+				right 0
+				width calc(100% - 5px)
+				background-color $customred2
+				border-top-left-radius 20px
+				border-bottom-left-radius 20px
+				@media mqtablet
+					width 50%
+				@media mqmobile-md
+					width 80%
+				@media mqmobile
+					width calc(100% - 5px)
+		&.services
+			ul
+				padding 15px 0
+			li
+				cover('.././img/design.jpg')
+				background-color $customred2
+				min-height 80px
+				margin 0 0 7px 0
+				border 0
+				&:hover
+					border 0
+					a
+						color $customwhite1
+						margin 12px 60px 0 0
+			a
+				float right
+				font-size 16px
+				color $customwhite1
+				margin 12px 40px 0 0
+				transition(.2s all ease-in)
+				&:hover
+					color $customwhite1
+					margin 12px 60px 0 0
+				@media mqdesktop
+					font-size 22px
+					
+		span
+			display inline-block
+			font-size 12px
+			font-weight 400
+		input
+			width 100%
+			padding 7px
+			border 0
+			margin 0
+			font-weight 400
+			color rgb(87, 0, 79)
+		button
+			margin 7px 0
+			font-weight 600
+		ul
+			text-align left
+		li
+			padding 15px 0
+			border-bottom 1px solid $customgray2
+			transition(.2s all ease-in-out)
+			&:hover
+				a
+					color $customred2
+					font-weight 400
+		a
+			font-size 15px
+			font-weight 400
+			color $customblack1
+		&.tags
+			a
+				background-color $customred2
+				padding 5px 15px
+				font-size 13px
+				text-transform uppercase
+				color $customwhite1
+				transition(.2s all ease-in-out)
+				&:hover
+					color $customblack1
+					background-color $customred1
+			li
+				color $customwhite1
+				display inline-block
+				border 0
+				padding 0
+				margin 5px 2px
+/*Comment Output*/
+.form-single
+	padding 25px 0 25px 0
+	margin 15px 0
+	form
+		clear both
+		background-color $customblack2
+		padding 25px 0 20px 0
+	.input-group
+		padding 0 15px 0 15px
+		background-color transparent		
+	input[type="submit"]
+		border 0
+		padding 8px 15px
+	strong
+		color $customblack4
+		padding 0 15px 6px 15px
+		display inline-block
+.comment-respond
+	clear both
+	padding 25px 0
+	.comment-form
+		@media mqtablet
+			text-align center
+		a
+			color $customyellow2
+		p
+			display block
+			padding 2px 0
+		label
+			display block
+		input,textarea
+			border 1px solid $customyellow2
+			padding 7px 15px
+			font-weight 600
+			font-size 16px
+			color $customyellow2
+			outline 0
+			max-width 100%
+			@media mqtablet
+				width 100%
+		textarea
+			width 100%
+			max-width 100%
+			height 100px
+			max-height 150px
+		.submit,input[type="submit"]
+			font-weight 600
+			border 0
+			outline 0
+			padding 5px 15px
+			@extend .btn-custom1
+#comments
+	font-size 18px
+	font-weight 100
+	clear both 
+	padding 25px 0
+	margin 0
+.commentlist
+	list-style none
+	padding 15px 0
+	font-size 16px
+	font-style normal
+	.fn
+		font-size 16px
+		font-weight 700
+		font-style normal
+		text-transform uppercase
+		padding 0 15px
+		a
+			font-size 16px
+			font-weight 700
+			font-style normal
+			text-transform uppercase
+			color $customyellow1
+			&:hover
+				color alpha($customblack1, 70%)
+	.comment-awaiting-moderation
+		font-size 18px
+		font-weight 100
+		font-style normal
+		margin 15px 0
+	a
+		font-size 16px
+		font-weight 700
+		text-transform uppercase
+		color $customyellow1
+		&:hover
+			color alpha($customblack1, 70%)
+	p
+		font-size 15px
+		padding 5px 0
+		font-weight 600
+	.comment-reply-link
+		font-size 10px
+		padding 5px 15px
+		@extend .btn-custom1
+	.commentmetadata
+		padding 5px 0
+		a
+			font-size 16px
+			font-weight 100
+	.comment-body
+		padding 15px 0

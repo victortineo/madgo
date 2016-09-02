@@ -1,0 +1,84 @@
+.mod-page-job-1
+	color alpha($customblack1, 60%)
+	line-height 1.5
+	.navigation-cases
+		position fixed
+		top 78px
+		left 0
+		right 0
+		background-color black
+		z-index 20
+		color $customwhite1
+		background-color darken($customblack3, 40%)
+		font-size 14px
+		div
+			padding 5px 15px
+			&:first-child
+				text-align right
+				background-color darken($customblack3, 70%)
+		strong
+			font-weight 600
+		span
+			font-weight 300
+		a
+			font-weight 300
+			color $customwhite1
+			&:hover
+				text-decoration none
+			&:before
+				content '| '
+		@media mqmobile-md
+			font-size 12px
+			div
+				text-align center
+				&:first-child
+					text-align center
+	.fullpage
+		margin 0
+		padding 0
+		background-color $customwhite1
+		background-size cover
+		background-position center
+		background-attachment fixed
+		height 100vh
+		min-height 300px
+		max-height 800px
+	.content
+		padding 30px 5px
+		@media mqdesktop
+			padding 75px 0
+	.tecnologias
+		@media mqmobile-md
+			padding 20px 10px
+		.aside-title
+			padding 20px
+			background-color $customblack2
+			h1
+				margin 0
+				color $customwhite1
+		ul
+			padding 20px 20px 0 20px
+			@media mqmobile-md
+				text-align center
+		li
+			padding-bottom 15px
+			&:last-child
+				padding-bottom 0
+	p
+		margin 0
+		padding 10px 0
+		line-height 1.4
+		font-size 14px
+	a
+		font-weight 100
+		color $customred1
+		&:hover
+			text-decoration underline
+	h1
+		font-size 15px
+		margin-bottom 5px
+	@media mqmobile-md
+		p
+			text-align justify
+		h1
+			text-align center
