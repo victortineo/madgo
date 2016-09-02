@@ -1402,6 +1402,8 @@ img {
   overflow: hidden;
   min-height: 250px;
   background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-transition: 0.2s all ease-in;
   -moz-transition: 0.2s all ease-in;
   transition: 0.2s all ease-in;

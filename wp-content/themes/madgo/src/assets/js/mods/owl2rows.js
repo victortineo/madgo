@@ -12,8 +12,20 @@ $(function () {
         owl2rowTarget: 'item',    // class for items in carousel div
         owl2rowContainer: 'owl2row-item', // class for items container
         owl2rowDirection: 'utd', // ltr : directions
-        items: 4,
-        dots: false
+        items: 2,
+        dots: false,
+        responsive : {
+            0 : {
+                items: 1,
+                loop: false
+            },
+            480 : {
+                items: 2
+            },
+            768 : {
+                items: 4
+            }
+        }
     };
     owl.owlCarousel(options);
 
