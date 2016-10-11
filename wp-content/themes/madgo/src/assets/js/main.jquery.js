@@ -14,18 +14,7 @@ setTimeout(function() {
       }
     }
   });
-  // Aparecer postit ao rolar a pagina
-  $( window ).scroll(function() {
-    var $objt = $( ".postit" );
-    $objt.each(function(index, el) {
-      $objt.animate({
-        opacity: 1},
-        5000, function() {
-        /* stuff to do after animation is complete */
-      });
-      
-    });
-  });
+
 
 
 

@@ -74,4 +74,9 @@ function portfolioWebDesign() {
 add_action( 'wp_ajax_nopriv_portfolioWebDesign', 'portfolioWebDesign');
 add_action( 'wp_ajax_portfolioWebDesign', 'portfolioWebDesign');
 
+function theme_prefix_rewrite_flush() {
+    create_base();
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'theme_prefix_rewrite_flush' );
 ?>

@@ -54,6 +54,7 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('dist/assets/js/'))
 });
 
+
 // Otimizar Imagens
 gulp.task('imagemin', function() {
     return gulp.src('src/assets/img/**/*')
@@ -76,5 +77,4 @@ gulp.task('watch', function(){
     gulp.watch('src/assets/css/*.css', ['minify-css']);
     gulp.watch('src/assets/js/**/*.js', ['uglify']);
     gulp.watch('src/**/*.html', ['minify-html']);
-    gulp.watch('src/assets/img/**/*', ['imagemin']);
 })

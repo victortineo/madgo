@@ -28,6 +28,7 @@
     "gulp-clean-css": "^2.0.10",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
+    "gulp-inline-source": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.4.0",
     "gulp-uglifyjs": "^0.6.2"

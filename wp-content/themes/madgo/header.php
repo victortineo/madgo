@@ -27,7 +27,8 @@
   <link rel="stylesheet" type="text/css" href="http://www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" type="text/css" href="http://www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/src/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/dist/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/dist/assets/font/caecilia/fonts.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -41,7 +42,7 @@
   echo 'navbar-shrink';
 } ?>">
   <div class="container navbar-wrapper">
-    <div class="branding col-xs-8 col-sm-2 text-right">
+    <div class="branding col-xs-8 col-sm-2">
       <a href="<?php bloginfo('url');?>" title="<?php wp_title('-', true, 'right'); bloginfo() ?>">
         <img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/madgo.png" alt="<?php wp_title('-', true, 'left'); bloginfo() ?>">
       </a>
@@ -57,7 +58,7 @@
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#top">Home</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#essencia">Essência</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#quemsomos">Quem somos</a></li>
-              <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#oquefazemos">O que fazemos</a></li>
+              <li><a id="abrirOquefazemos" href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#oquefazemos">O que fazemos</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#clientes">Clientes</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#portfolio">Portfólio</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#contato">Contato</a></li>

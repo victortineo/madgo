@@ -20,9 +20,11 @@
 		&-wrapper
 			max-width 1024px
 	.branding
-		text-align center
+		text-align left
 		display block
 		padding 0
+		@media mqdesktop
+			text-align center
 		@media mqmobile-md
 			img
 				max-width 47%
@@ -35,7 +37,7 @@
 		right 0
 		padding 0 15px 0 15px
 		border 0
-		z-index 2
+		z-index 20
 		background-color $customwhite1
 	.menu
 		ul
@@ -59,6 +61,7 @@
 						@media mqtablet-md
 							border 0
 				a
+					border-top 3px solid transparent
 					font-weight 400
 					text-decoration none
 					padding 27px 10px
@@ -136,4 +139,4 @@
 	@media mqtablet-md
 		.menu-collapse
 			font-size 24px
-			padding 14px 0
+			padding 22px 0

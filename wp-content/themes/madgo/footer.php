@@ -15,9 +15,21 @@
 </section>
 <!-- ./ FOOTER -->
 
+<div class="postit postit-fixed1 link-animation">
+<a href="#contato">
+  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/quero_orcamento.png" alt="Quero um orçamento">
+  </a>
+</div>
+<div id="cat-onepagelove" class="postit postit-fixed2">
+     <a href="http://onepagelove.com/madgo" target="_blank"><img src="https://s3.amazonaws.com/onepagelove/one-page-love-award-left.png"></a>
+</div>
+
+<!-- Serviços -->
+<?php get_template_part( "templates/template", "servicos" ); ?>
+<!-- Serviços -->
+
 <!-- Load scripts -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="http://www.owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script> -->
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/dist/assets/js/all.js"></script>

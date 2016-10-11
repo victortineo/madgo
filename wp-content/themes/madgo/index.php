@@ -21,7 +21,7 @@
 <section id="essencia" class="mod_essencia">
   <div class="container">
     <div class="row">
-      <article class="col-xs-12 col-sm-6">
+      <article class="col-xs-12 col-sm-7">
         <div class="page-header">
           <h1>Essência</h1>
           <h2>A MadGO nasceu da vontade dos sócios de aplicarem o conceito Mad Good Ones de vida ao ambiente de trabalho. Entenda o conceito:</h2>
@@ -95,11 +95,9 @@
       <div class="page-header">
         <h1>OK! Mas, o que fazemos?</h1>
       </div>
-      <div class="col-xs-12">
         <p>DESIGN,<br>
         WEBDESIGN <span>&</span><br>
         MARKETING DIGITAL</p>
-      </div>
     </div>
   </div>
 </section>
@@ -112,53 +110,62 @@
       <article class="col-xs-12 col-sm-4">
         <figure><img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/design-icon-1.png" alt=""></figure>
         <div>
-          <p>
-            Marca – Logotipo<br>
-            Namming<br>
-            Identidade Visual<br>
-            Papelaria<br>
-            Apresentações<br>Institucional<br>
-            Apresentação Comercial<br>
-            Folder<br>
-            Design Gráfico<br>
-            Conceito Criativo<br>
-          </p>
+          <ul>
+            <li><a href="#">Marca – Logotipo</a></li>
+            <li><a href="#">Namming</a></li>
+            <li><a href="#">Identidade Visual</a></li>
+            <li><a href="#">Papelaria</a></li>
+            <li><a href="#">Apresentações</a></li>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Apresentação Comercial</a></li>
+            <li><a href="#">Folder</a></li>
+            <li><a href="#">Design Gráfico</a></li>
+            <li><a href="#">Conceito Criativo</a></li>
+          </ul>
         </div>
       </article>
       <article class="col-xs-12 col-sm-4">
         <figure><img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/webdesign-icon-1.png" alt=""></figure>
         <div>
-          <p>Site – Website<br>
-          Layout Mobile<br>
-          Wireframing<br>
-          Desenvolvimento<br>
-          Responsivo – Mobile<br>
-          UX/UI Design<br>
-          One Page Site<br>
-          App – Aplicativo<br>
-          Wordpress e HTML<br>
-          Front-end<br></p>
+          <ul>
+            <li><a href="#">Site – Website</a></li>
+            <li><a href="#">Layout Mobile</a></li>
+            <li><a href="#">Wireframing</a></li>
+            <li><a href="#">Desenvolvimento</a></li>
+            <li><a href="#">Responsivo – Mobile</a></li>
+            <li><a href="#">UX/UI Design</a></li>
+            <li><a href="#">One Page Site</a></li>
+            <li><a href="#">App – Aplicativo</a></li>
+            <li><a href="#">Wordpress e HTML</a></li>
+            <li><a href="#">Front-end</a></li>
+          </ul>
         </div>
       </article>
       <article class="col-xs-12 col-sm-4">
         <figure><img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/marketing-digital-icon.png" alt=""></figure>
         <div>
-          <p>Adwords<br>
-          Links Patrocinados<br>
-          Facebook Ads<br>
-          E-mail Marketing<br>
-          Landing Page<br>
-          Inbound<br>
-          Geração de Leads<br>
-          Conteúdo para Blog<br>
-          Social Mídia<br>
-          SEO<br></p>
+          <ul>
+            <li><a href="#">Adwords</a></li>
+            <li><a href="#">Links Patrocinados</a></li>
+            <li><a href="#">Facebook Ads</a></li>
+            <li><a href="#">E-mail Marketing</a></li>
+            <li><a href="#">Landing Page</a></li>
+            <li><a href="#">Inbound</a></li>
+            <li><a href="#">Geração de Leads</a></li>
+            <li><a href="#">Conteúdo para Blog</a></li>
+            <li><a href="#">Social Mídia</a></li>
+            <li><a href="#">SEO</a></li>
+          </ul>
         </div>
       </article>
     </div>
   </div>
 </section>
 <!-- ./ LISTA MADGO 2 -->
+
+<!-- Clientes -->
+<?php get_template_part( "templates/template", "clientes" ); ?>
+<!-- Clientes -->
 
 <!-- Portfólio -->
 <?php get_template_part( "templates/template", "portfolio" ); ?>

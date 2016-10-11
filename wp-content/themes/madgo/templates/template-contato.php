@@ -1,15 +1,28 @@
-<section id="contato" class="mod-contato">
+<section id="contato" class="mod-contato <?php if (!is_home()): ?>
+  page
+<?php endif ?>">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <?php if (is_home()): ?>
         <div class="page-header">
           <h1>Quero um orçamento!</h1>
         </div>
+        <?php elseif (is_single('servicos') || is_singular('portfolio')): ?>
+        <div class="page-header">
+          <?php $subtipo = get_field('subtipo'); ?>
+          <h1>Faça um orçamento: <?=$subtipo?></h1>
+          <h2>Entre em contato conosco, teremos o maior prazer em atende-lo da melhor maneira possivel e ajudá-lo a encontrar a solução ideal para sua necessidade.</h2>
+        </div>
+        <?php endif ?>
       </div>
       <div class="col-xs-12 col-sm-8">
         <div class="form">
           <p>Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
           <form action="#" method="post">
+            <?php if (is_single('servicos') || is_singular('portfolio')): ?>
+            <input type="hidden" value="<?=$subtipo?>" name="Assunto">
+            <?php endif ?>
             <label for="nome">Seu nome</label>
             <div class="input-group">
               <input type="text" name="Nome" id="nome" required>
@@ -40,8 +53,13 @@
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="absolute">
-          O café é por nossa conta :)<br>
-          <span class="glyphicon glyphicon-envelope"></span> <span>contato@madgo.com.br</span>
+          <b class="garagem">Garagem aberta!</b>
+          <p>O café é por nossa conta :)</p>
+          <ul>
+            <li><i class="glyphicon glyphicon-envelope"></i> <span>contato@madgo.com.br</span></li>
+            <li><i class="glyphicon glyphicon-phone"></i> <span>+55 11 3436.8132</span></li>
+            <li><i class="glyphicon glyphicon-map-marker"></i> <span>Av. General Ataliba Leonel, 1223<br>Santana – Cep 02033-000<br>São Paulo, SP</span></li>
+          </ul>
         </div>
       </div>
     </div>

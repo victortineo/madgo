@@ -7,7 +7,7 @@
 		left 0
 		right 0
 		background-color black
-		z-index 20
+		z-index 10
 		color $customwhite1
 		background-color darken($customblack3, 40%)
 		font-size 14px
@@ -38,7 +38,7 @@
 		padding 0
 		background-color $customwhite1
 		background-size cover
-		background-position center
+		background-position top center
 		background-attachment fixed
 		height 100vh
 		min-height 300px
@@ -82,3 +82,24 @@
 			text-align justify
 		h1
 			text-align center
+.controls-mod-job
+	@media mqtablet
+		display none
+	.controls-left,
+	.controls-right
+		vertical-middle(-50%)
+		position fixed
+		top 50%
+		left 0
+		transition(.2s all ease-in)
+		font-size 42px
+		color $customblack1
+		padding 15px
+		background-color alpha($customwhite1, 45%)
+		&:hover
+			color $customwhite1
+			background-color $customblack1
+	.controls-right
+		float right
+		right 0
+		left inherit
