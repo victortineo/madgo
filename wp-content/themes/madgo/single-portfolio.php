@@ -71,8 +71,9 @@ endif;
 
 <div class="controls-mod-job">
   <?php $next_post = get_next_post(); ?>
-  <a href="<?php echo $next_post->guid ?>" class="controls-right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  <a href="<?php echo $prev_post->guid ?>" class="controls-left"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+  <?php $prev_post = get_previous_post(); ?>
+  <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="controls-right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="controls-left"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 </div>
 <?php endwhile ?>
 <?php endif ?>

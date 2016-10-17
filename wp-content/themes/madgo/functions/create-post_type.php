@@ -17,8 +17,8 @@ function create_base() {
             'query_var'          => true,
             'rewrite'            => array( 'slug' => 'portfolio' ),
             'capability_type'    => 'post',
-            'has_archive'        => false,
-            'hierarchical'       => false,
+            'has_archive'        => true,
+            'hierarchical'       => true,
             'menu_position'      => null,
             'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
         )
