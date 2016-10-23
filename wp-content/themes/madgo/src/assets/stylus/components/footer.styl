@@ -2,13 +2,52 @@
 	padding 35px 0
 	background-color $customblack2
 	color $customgray2
+	@media mqmobile-md
+		text-align center
 	img
 		display inline-block
 		padding-top 5px
 		margin-top -20px
+		@media mqmobile-md
+			display block
+			margin 0 auto
 	span
 		font-size 13px
 		font-weight 100
 		display inline-block
 		@media mqmobile-md
 			text-align center
+	.social
+		float right
+		margin-top 5px
+		@media mqmobile-md
+			float none
+			display block
+			text-align center
+		li
+			display inline-block
+			width 32px
+			height 32px
+			text-indent -999999px
+			transition(.2s all ease-in-out)
+			cursor pointer
+			a
+				display block
+				width 32px
+				height 32px
+			&.behance
+				cover('../img/social/behance.png')
+				&:hover
+					background-image url('../img/social/behance_hover.png')
+			&.facebook
+				cover('../img/social/facebook.png')
+				&:hover
+					background-image url('../img/social/facebook_hover.png')
+			&.google
+				cover('../img/social/google.png')
+				&:hover
+					background-image url('../img/social/google_hover.png')
+			&.linkedin
+				cover('../img/social/linkedin.png')
+				&:hover
+					background-image url('../img/social/linkedin_hover.png')

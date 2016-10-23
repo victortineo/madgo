@@ -189,10 +189,21 @@ img {
   background-color: #2b2822;
   color: #999;
 }
+@media only screen and (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
 .footer img {
   display: inline-block;
   padding-top: 5px;
   margin-top: -20px;
+}
+@media only screen and (max-width: 767px) {
+  .footer img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .footer span {
   font-size: 13px;
@@ -203,6 +214,72 @@ img {
   .footer span {
     text-align: center;
   }
+}
+.footer .social {
+  float: right;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .footer .social {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+.footer .social li {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-indent: -999999px;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+.footer .social li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.footer .social li.behance {
+  background: url("../img/social/behance.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer .social li.behance:hover {
+  background-image: url("../img/social/behance_hover.png");
+}
+.footer .social li.facebook {
+  background: url("../img/social/facebook.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer .social li.facebook:hover {
+  background-image: url("../img/social/facebook_hover.png");
+}
+.footer .social li.google {
+  background: url("../img/social/google.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer .social li.google:hover {
+  background-image: url("../img/social/google_hover.png");
+}
+.footer .social li.linkedin {
+  background: url("../img/social/linkedin.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer .social li.linkedin:hover {
+  background-image: url("../img/social/linkedin_hover.png");
 }
 .input-group {
   display: inline-block;
@@ -1791,6 +1868,80 @@ img {
 .mod-servicos .servicos-content a:hover {
   font-weight: 600;
   background-color: #e94647;
+}
+.planejamento-estrategico {
+  padding-top: 50px;
+}
+.planejamento-estrategico .page-header {
+  margin: 0 0 25px;
+  padding: 0;
+}
+@media only screen and (max-width: 990px) {
+  .planejamento-estrategico .page-header {
+    margin: 25px 0;
+  }
+}
+.planejamento-estrategico .page-header h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+.planejamento-estrategico .content {
+  padding: 0 0 50px;
+}
+.planejamento-estrategico .formula {
+  padding: 80px 15px;
+  background-color: #f6f1f1;
+  text-align: center;
+}
+.planejamento-estrategico .formula span,
+.planejamento-estrategico .formula strong {
+  line-height: 1;
+}
+.planejamento-estrategico .formula span.black {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.planejamento-estrategico .formula span.red {
+  color: #e94647;
+}
+.planejamento-estrategico .formula strong {
+  font-size: 42px;
+  text-transform: uppercase;
+}
+.planejamento-estrategico .formula-box {
+  padding-top: 40px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 90px;
+}
+.planejamento-estrategico .formula-box-1 {
+  padding: 0;
+}
+.planejamento-estrategico .formula-box-1 span.black {
+  font-size: 56px;
+}
+.planejamento-estrategico .formula-box-2 {
+  background-image: url("../img/separetor-box-2.png");
+}
+.planejamento-estrategico .formula-box-3 {
+  background-image: url("../img/separetor-box-3.png");
+}
+.planejamento-estrategico .formula-box-3 span.black {
+  font-size: 27px;
+}
+.planejamento-estrategico p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.planejamento-estrategico p:last-child {
+  margin: 0;
+}
+.planejamento-estrategico p strong {
+  color: #e94647;
+  font-weight: 300;
 }
 .postit {
   -webkit-transition: 1s all ease-in;
