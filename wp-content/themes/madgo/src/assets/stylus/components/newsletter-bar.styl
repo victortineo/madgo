@@ -1,0 +1,57 @@
+.newsletter-bar
+	transition(.2s all ease-in-out)
+	position fixed
+	bottom 0
+	left 0
+	right 0
+	background-color $customblack2
+	color $customwhite1
+	padding 10px 0
+	max-height 0
+	opacity 0
+	&.active
+		opacity 1
+		max-height 100%
+		z-index 20
+	@media mqmobile-md
+		display none
+	p
+		font-size 20px
+		padding 7px 0
+		margin 0
+	&-button
+		position absolute
+		top 0
+		right 0
+		padding-top 8.5px
+		background-color transparent
+		color $customwhite1
+		border 0
+	.form-group
+		margin 0
+		.form-control
+			display inline-block
+			width auto
+			border-radius 0
+			background-color transparent
+			border-top 0
+			border-left 0
+			border-right 0
+			border-bottom 3px solid alpha($customwhite1, 80%)
+			-webkit-box-shadow initial
+			box-shadow initial
+			color $customwhite1
+			&:focus
+				outline 0
+				-webkit-box-shadow initial
+				box-shadow initial
+				border-color $customred1
+		.form-button
+			transition(.3s all ease-in-out)
+			padding 5px 15px
+			background-color transparent
+			border 3px solid alpha($customwhite1, 80%)
+			color $customwhite1
+			&:hover
+				border-color $customred1
+				color $customred1

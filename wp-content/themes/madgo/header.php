@@ -58,7 +58,7 @@
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#top">Home</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#essencia">Essência</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#quemsomos">Quem somos</a></li>
-              <li><a id="abrirOquefazemos" href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#oquefazemos">O que fazemos</a></li>
+              <li><a id="abrirOquefazemos" href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#">O que fazemos</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#clientes">Clientes</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#portfolio">Portfólio</a></li>
               <li><a href="<?php if(!is_home()):bloginfo('url'); echo "/"; endif; ?>#contato">Contato</a></li>

@@ -16,11 +16,11 @@ function create_base() {
             'show_in_menu'       => true,
             'query_var'          => true,
             'rewrite'            => array( 'slug' => 'portfolio' ),
-            'capability_type'    => 'post',
+            'capability_type'    => 'page',
             'has_archive'        => true,
             'hierarchical'       => true,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes' )
         )
     );
     register_post_type( 'Clientes',
@@ -68,14 +68,35 @@ function create_base() {
             'show_in_menu'       => true,
             'query_var'          => true,
             'rewrite'            => array( 'slug' => 'servicos' ),
-            'capability_type'    => 'post',
+            'capability_type'    => 'page',
             'has_archive'        => false,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes' )
         )
     );  
-
+    register_post_type( 'galeria',
+        array(
+            'labels' => array(
+                'name' => __( 'Galeria' ),
+                'singular_name' => __( 'Galeria' )
+            ),
+            'taxonomies' => array('category'),
+            'menu_icon' => 'dashicons-feedback',
+            'public' => true,
+            'public'             => true,
+            'publicly_queryable' => true,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'query_var'          => true,
+            'rewrite'            => array( 'slug' => 'galeria' ),
+            'capability_type'    => 'page',
+            'has_archive'        => false,
+            'hierarchical'       => false,
+            'menu_position'      => null,
+            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes' )
+        )
+    );
 }
 
  ?>

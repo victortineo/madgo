@@ -25,8 +25,6 @@ Template Name: Blog
 		</div>
 	</div>
 </div>
-	<?php endwhile; ?>
-<?php endif; ?>
 
 <section id="blog" class="container-fluid blog">
 	<div class="row">
@@ -69,4 +67,8 @@ Template Name: Blog
 		<?php get_sidebar(); ?>
 	</div>
 </section>
+<?php endwhile; ?>
+<?php endif; ?>
+
+
 <?php get_footer(); ?>

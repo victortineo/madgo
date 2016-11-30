@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<section id="footer" class="footer">
+<section id="footer" class="footer" <?php if (!is_page('contato')): ?>style="padding-bottom: 80px;"<?php endif ?>>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
@@ -41,37 +41,56 @@
 <?php get_template_part( "templates/template", "servicos" ); ?>
 <!-- Serviços -->
 
+<?php if (!is_page('contato')): ?>
+<section class="newsletter-bar">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col-xs-6">
+        <p>Receba nossa proposta comercial</p>
+      </div>
+      <div class="col-xs-6">
+        <form action="<?php bloginfo('url') ?>/contato" method="post">
+          <div class="form-group">
+            <input required type="email" name="email" class="form-control" placeholder="Insira aqui seu e-mail">
+            <input class="form-button" type="submit" value="ENVIAR">
+          </div>
+        </form>
+        <!-- <button class="newsletter-bar-button"><i class="glyphicon glyphicon-remove"></i></button> -->
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif ?>
+
 <!-- Load scripts -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/jquery/dist/jquery.min.js">
+</script>
+
+<script>var $ = jQuery.noConflict();</script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/dist/assets/js/all.js"></script>
-<!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script> -->
-<!-- <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /**
- * Translated default messages for the $ validation plugin.
- * Locale: PT_PT
- */
-$.extend($.validator.messages, {
-  required: "Campo de preenchimento obrigat&oacute;rio.",
-  remote: "Por favor, corrija este campo.",
-  email: "Por favor, introduza um endere&ccedil;o eletr&oacute;nico v&aacute;lido.",
-  url: "Por favor, introduza um URL v&aacute;lido.",
-  date: "Por favor, introduza uma data v&aacute;lida.",
-  dateISO: "Por favor, introduza uma data v&aacute;lida (ISO).",
-  number: "Por favor, introduza um n&uacute;mero v&aacute;lido.",
-  digits: "Por favor, introduza apenas d&iacute;gitos.",
-  creditcard: "Por favor, introduza um n&uacute;mero de cart&atilde;o de cr&eacute;dito v&aacute;lido.",
-  equalTo: "Por favor, introduza de novo o mesmo valor.",
-  accept: "Por favor, introduza um ficheiro com uma extens&atilde;o v&aacute;lida.",
-  maxlength: $.validator.format("Por favor, n&atilde;o introduza mais do que {0} caracteres."),
-  minlength: $.validator.format("Por favor, introduza pelo menos {0} caracteres."),
-  rangelength: $.validator.format("Por favor, introduza entre {0} e {1} caracteres."),
-  range: $.validator.format("Por favor, introduza um valor entre {0} e {1}."),
-  max: $.validator.format("Por favor, introduza um valor menor ou igual a {0}."),
-  min: $.validator.format("Por favor, introduza um valor maior ou igual a {0}.")
-});}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
-<!-- <script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
-
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/jquery-1.6.1.min.js"></script>
+<script>var jQuery = jQuery.noConflict();</script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/bower_components/jquery.prettyPhoto.js"></script>
 <?php wp_footer(); ?>
+
+<script>
+  $(document).ready(function(){
+  // Efeito de rolagem suave
+  $('.link-animation').find('a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: (target.offset().top) - 64
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});// READY 
+</script>
 </body>
 </html>

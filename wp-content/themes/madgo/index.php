@@ -138,7 +138,8 @@
 <!-- Clientes -->
 
 <!-- Portfólio -->
-<?php get_template_part( "templates/template", "portfolio" ); ?>
+<?php //get_template_part( "templates/template", "portfolio" ); ?>
+<?php get_template_part( "templates/template", "isotope" ); ?>
 <!-- Portfólio -->
 
 <!-- FRASE 2 -->

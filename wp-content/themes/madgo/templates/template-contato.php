@@ -19,10 +19,11 @@
       <div class="col-xs-12 col-sm-8">
         <div class="form">
           <p>Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
-          <form action="#" method="post">
+          <form id="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
             <?php if (is_single('servicos') || is_singular('portfolio')): ?>
-            <input type="hidden" value="<?=$subtipo?>" name="Assunto">
+            <input type="hidden" value="<?=$subtipo?>" name="Categoria">
             <?php endif ?>
+            <input type="hidden" value="Logotipo" name="Categoria">
             <label for="nome">Seu nome</label>
             <div class="input-group">
               <input type="text" name="Nome" id="nome" required>
@@ -53,7 +54,6 @@
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="absolute">
-          <b class="garagem">Garagem aberta!</b>
           <p>O café é por nossa conta :)</p>
           <ul>
             <li><i class="glyphicon glyphicon-envelope"></i> <span>contato@madgo.com.br</span></li>

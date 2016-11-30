@@ -3,30 +3,22 @@
 		<header><h1>NEWSLETTER</h1></header>
 		<!-- <span>Assine nossa newsletter</span> -->
 		<div class="content">
-		<?php 
-        $args = array(
-        'order' => 'DESC',
-        'post_type' => 'contato',
-        'posts_per_page' => 1
-        );
-        // the query
-        $the_query = new WP_Query( $args ); ?>
-        <?php if ( $the_query->have_posts() ) : $the_query->the_post();
-        	$email = get_field('email');
-        ?>
-		<form action="https://formspree.io/<?php echo $email; ?>" method="POST">
-			<input type="hidden" name="Lugar" value="MadGO" />
-            <input type="hidden" name="_next" value="<?php echo get_template_directory_uri() ?>/obrigado.html" />
-            <input type="hidden" name="_subject" value="Newsletter Sidebar MadGO" />
-			<!-- <div class="input-group">
-				<input type="text" placeholder="Seu nome" name="FNAME" id="mce-FNAME">
-			</div> -->
+		<style type="text/css">
+			.mce-responses {font-size: 12px;}
+		</style>
+		<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate action="//madgo.us11.list-manage.com/subscribe/post?u=a87686e44179880f1e95c6c84&amp;id=be93b8247b" method="POST">
+			<input type="hidden" name="Lugar" value="Newsletter Sidebar MadGO" />
 			<div class="input-group">
-				<input type="email" placeholder="Digite seu e-mail" name="EMAIL" id="mce-EMAIL">
+				<input type="email" placeholder="Digite seu e-mail" name="EMAIL" id="mce-EMAIL" required>
 			</div>
+			<div id="mce-responses" class="mce-responses clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a87686e44179880f1e95c6c84_be93b8247b" tabindex="-1" value=""></div>
 			<input value="INSCREVA-SE" type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-custom2">
 		</form>
-		<?php endif; ?>
+		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 		</div>
 	</div>
 	<div class="sidebar views">

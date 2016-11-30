@@ -1,22 +1,49 @@
-$(document).ready(function(){
-setTimeout(function() {
+$( document ).ready(function() {
 
-  // Efeito de rolagem suave
-  $('.link-animation').find('a').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname ==      this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: (target.offset().top) - 64
-        }, 1000);
-        return false;
+  var $Contato = $('#formContato');
+  var $waiting =  $('#formContato #response .waiting');
+  var $success =  $('#formContato #response .success');
+  var $error =  $('#formContato #response .error');
+
+  $Contato.on('submit', function(event) {
+    event.preventDefault();
+    $waiting.css('display', 'block');
+    $(this).ajaxSubmit({
+      success: function(response) {
+        $Contato[0].reset();
+        $waiting.css('display', 'none');
+        $success.css('display', 'block');
+      },
+      error: function(response) {
+        console.log(response);
+        $waiting.css('display', 'none');
+        $error.css('display', 'block');
       }
+    });
+    setTimeout(function(){
+      $success.css('display', 'none');
+      $error.css('display', 'none');
+    }, 10000);
+  });
+
+  var documentHeight = $(document).outerHeight() - 100,
+  $window = $(window),
+  $newsletterBar = $('.newsletter-bar'),
+  $newsletterButton = $('.newsletter-bar-button'),
+  $closeBar = false;;
+  var $windowHeight = $window.height();
+  $newsletterButton.on('click', function(event) {
+    event.preventDefault();
+    $closeBar = true;
+    $newsletterBar.removeClass('active');
+  });
+  $window.on('scroll', function(event) {
+    var $scrollTop = ($(this).scrollTop() + $windowHeight);
+    if ($scrollTop >= documentHeight && $closeBar == false || $scrollTop >= 1200  && $closeBar == false ) {
+      $newsletterBar.addClass('active');
     }
   });
 
-
-
-
-}, 500);//SET TIME OUT
-});// READY 
+  $('#comercial').modal('show');
+  
+});
