@@ -29,7 +29,7 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "design"): ?>
-							<li><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+							<li><a title="<?php the_title(); ?>" href="<?php if(get_field('mostrar_link') != 'não'):?><?php the_permalink(); ?><?php else: ?># <?php endif ?>"><?php the_title(); ?></a></li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>
@@ -43,7 +43,7 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "webdesign"): ?>
-							<li><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+							<li><a title="<?php the_title(); ?>" href="<?php if(get_field('mostrar_link') != 'não'):?><?php the_permalink(); ?><?php else: ?># <?php endif ?>"><?php the_title(); ?></a></li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>
@@ -57,7 +57,7 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "marketing"): ?>
-							<li><a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+							<li><a title="<?php the_title(); ?>" href="<?php if(get_field('mostrar_link') != 'não'):?><?php the_permalink(); ?><?php else: ?># <?php endif ?>"><?php the_title(); ?></a></li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>

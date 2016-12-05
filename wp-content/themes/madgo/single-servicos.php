@@ -28,11 +28,14 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
   </div>
 </section>
 
+<?php if ($mostrar_portfolio != 'não'): ?>
 <div class="owl-wrapper">
 <section class="mod-portfolio-1">
   <?php get_template_part( 'templates/portfolio', $mostrar_portfolio ); ?>
 </section>
 </div>
+<?php endif ?>
+
 
 <!-- Contato -->
 <section id="contato" class="mod-contato page">
