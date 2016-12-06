@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	<div class="sidebar views">
-		<header><h1>POSTS MAIS LIDOS</h1></header>
+		<header><h1>ARTIGOS MAIS LIDOS</h1></header>
 		<ul>
 		<?php 
 		$args = array(

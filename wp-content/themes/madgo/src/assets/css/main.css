@@ -2232,6 +2232,28 @@ img {
   bottom: 10%;
   left: 0;
 }
+.wp-list-tags a {
+  background-color: #e94647;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+.wp-list-tags a:hover {
+  color: #000;
+  background-color: #ff6b59;
+}
+.wp-list-tags li {
+  color: #fff;
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  margin: 5px 2px;
+}
 .frase1,
 .frase2 {
   background-color: #f6f1f1;
@@ -2254,7 +2276,7 @@ img {
   font-style: normal;
 }
 .frase2 {
-  background-color: #2b2822;
+  background-color: #35322c;
   padding: 50px 15px;
 }
 .frase2 p {

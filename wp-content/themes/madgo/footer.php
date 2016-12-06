@@ -5,7 +5,7 @@
     <div class="col-xs-12 col-sm-6">
       <img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/madgo-footer.jpg" alt="design by MadGO">
       <span>Todos os direitos reservados a MadGO.<br>
-      © 2013 - 2016</span>
+      © 2016</span>
     </div>
     <div class="col-xs-12 col-sm-6">
       <ul class="social">
@@ -14,9 +14,6 @@
         </li>
         <li class="facebook">
           <a href="https://www.facebook.com/MadGoodOnes" target="_blank">Facebook</a>
-        </li>
-        <li class="google">
-          <a href="https://plus.google.com/b/101364115676192305215/" target="_blank">Google</a>
         </li>
         <li class="linkedin">
           <a href="http://www.linkedin.com/company/MadGO" target="_blank">LinkedIn</a>
