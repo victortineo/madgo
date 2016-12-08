@@ -50,7 +50,28 @@
 		<?php endwhile; ?>
 		</ul>
 	</div>
-	
+
+	<div class="sidebar newsletter newsletter2 formContato">
+		<header><h1>Quer saber como atrair clientes e vender mais?</h1></header>
+		<strong>Insira o seu endereço de email abaixo e aprenda conosco!</strong><br>
+		<div class="iconsAnimated animated bounce infinite">
+			<span class="icon-arrow-down1 "></span>
+			<span class="icon-arrow-down1"></span>
+		</div>
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<form action="https://formspree.io/ricardo.rocha@madgo.com.br" method="POST">
+            <input type="hidden" name="Lugar" value="MadGO" />
+            <input type="hidden" name="_next" value="<?php echo get_template_directory_uri() ?>/obrigado2.html" />
+            <input type="hidden" name="_subject" value="Saber sobre atrair cliente e vender na internet" />
+			<div class="input-group">
+				<input type="text" placeholder="Nome" name="Nome" required>
+			</div>
+			<div class="input-group">
+				<input type="email" placeholder="E-mail" name="E-mail" required>
+			</div>
+			<input value="QUERO APRENDER" type="submit" class="btn btn-custom1">
+	</form>	
+
 	<div class="sidebar services">
 		<header><h1>O QUE FAZEMOS</h1></header>
 		<ul>
@@ -60,20 +81,22 @@
 			</a>
 			</li>
 			<li class="row design" style="background-image: url('http://madknow.com.br/madgo/wp-content/themes/madgo/dist/assets/img/design.jpg');">
-			<a href="http://madknow.com.br/madgo/">
+			<a href="madknow.com.br/madgo/">
 			<strong>DESIGN</strong>
 			</a>
 			</li>
 			<li class="row design" style="background-image: url('http://madknow.com.br/madgo/wp-content/themes/madgo/dist/assets/img/marketing-digital.jpg');">
-			<a href="http://madknow.com.br/madgo/">
+			<a href="madknow.com.br/madgo/">
 			<strong>MARKETING DIGITAL</strong>
 			</a>
 			</li>
 			<li class="row design" style="background-image: url('http://madknow.com.br/madgo/wp-content/themes/madgo/dist/assets/img/webdesign.jpg');">
-			<a href="http://madknow.com.br/madgo/">
+			<a href="madknow.com.br/madgo/">
 			<strong>WEBDESIGN</strong>
 			</a>
 			</li>
+
+
 		</ul>
 	</div>
 	<div class="sidebar">
@@ -92,27 +115,6 @@
 		<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 		<?php endwhile; ?>
 		</ul>
-	</div>
-
-	<div class="sidebar newsletter newsletter2">
-		<header><h1 class="titulo-quero-venda">Quer saber como atrair clientes e vender mais?</h1></header>
-		<strong class="sub-title-venda">Insira o seu endereço de email abaixo e aprenda conosco!</strong>
-		<form action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php"" method="POST" class="formContato  	form-quero-venda">
-            <input type="hidden" name="Lugar" value="MadGO" />
-            <input type="hidden" name="_next" value="<?php echo get_template_directory_uri() ?>/obrigado2.html" />
-            <input type="hidden" name="_subject" value="Saber sobre atrair cliente e vender na internet" />
-           	<div class="input-group">
-				<input type="text" placeholder="Nome" name="Nome" required>
-			</div>
-			<div class="input-group">
-				<input type="email" placeholder="E-mail" name="E-mail" required>
-			</div>
-			<input value="QUERO APRENDER" type="submit" class="btn btn-custom1">
-			 <div id="mce-responses" class="mce-responses clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-	</form>
 	</div>
 	<div class="sidebar tags">
 		<header><h1>TAGS</h1></header>

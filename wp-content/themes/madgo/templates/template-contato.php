@@ -19,7 +19,7 @@
       <div class="col-xs-12 col-sm-8">
         <div class="form">
           <p>Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
-          <form id="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
+          <form class="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
             <?php if (is_single('servicos') || is_singular('portfolio')): ?>
             <input type="hidden" value="<?=$subtipo?>" name="Categoria">
             <?php endif ?>

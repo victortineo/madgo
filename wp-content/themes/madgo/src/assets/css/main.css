@@ -170,6 +170,9 @@ img {
   background-color: #423636;
   color: #fff;
 }
+.btn-portifolio-blog {
+  margin: 15px 0;
+}
 .footer {
   padding: 35px 0;
   background-color: #2b2822;
@@ -564,6 +567,11 @@ img {
   color: #fff;
   text-transform: uppercase;
 }
+.blog .sidebar header h1.titulo-quero-venda {
+  font-size: 20px;
+  padding: 10px 5px;
+  border: 2px solid #e94647;
+}
 .blog .sidebar.newsletter {
   padding: 0;
   background-color: #e94647;
@@ -725,7 +733,7 @@ img {
   display: inline-block;
   border: 0;
   padding: 0;
-  margin: 5px 2px;
+  margin: 7px 4px;
 }
 .form-single {
   padding: 25px 0 25px 0;
@@ -860,6 +868,14 @@ img {
 }
 .commentlist .comment-body {
   padding: 15px 0;
+}
+.newsletter2 form {
+  padding: 20px;
+}
+.sub-title-venda {
+  display: block;
+  padding: 15px 17px 0;
+  font-size: 18px;
 }
 .mod-contato {
   padding: 80px 0;
