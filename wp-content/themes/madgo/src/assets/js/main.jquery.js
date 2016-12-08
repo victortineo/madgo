@@ -19,9 +19,12 @@ $( document ).ready(function() {
         $Contato[0].reset();
         $waiting.css('display', 'none');
         $success.css('display', 'block');
-        $newsletterBar.css('display', 'none');
-        $this.css('display', 'none');
-        $message.removeClass('sr-only');
+
+        if ($(this).hasClass('formNewsletter')) {
+          $this.css('display', 'none');
+          $message.removeClass('sr-only');
+        }
+
       },
       error: function(response) {
         console.log(response);
@@ -32,8 +35,10 @@ $( document ).ready(function() {
     setTimeout(function(){
       $success.css('display', 'none');
       $error.css('display', 'none');
-      $message.addClass('sr-only');
-      $newsletterBar.css('display', 'none');
+      if ($(this).hasClass('formNewsletter')) {
+        $newsletterBar.css('display', 'none');
+        $('.footer').css('padding-bottom','35px');
+      }
     }, 10000);
   });
   

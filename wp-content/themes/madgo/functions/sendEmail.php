@@ -2,11 +2,14 @@
 ini_set('default_charset', 'UTF-8');
 $nomeUsuario = '';
 $emailUsuario = '';
+$assunto = '';
 foreach($_POST as $campo => $valor){
    if($campo == 'Nome') {
    	$nomeUsuario = $valor;
    } else if($campo == 'E-mail') {
    	$emailUsuario = $valor;
+   } else if($campo == 'Assunto') {
+   	$assunto = $valor;
    }
 }
 
@@ -37,7 +40,7 @@ $mail->addAddress($from, $fromName);     // Add a recipient
 $mail->addReplyTo($emailUsuario, $nomeUsuario);
 
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = 'Formulário de Contato';
+$mail->Subject = $assunto;
 $mail->Body    = $template;
 
 if(!$mail->send()) {

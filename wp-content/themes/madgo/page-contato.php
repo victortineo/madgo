@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-<?php get_template_part( 'functions/proposta', 'comercial' ); ?>
+<?php get_header(); ?><!-- 
+<?php get_template_part( 'functions/proposta', 'comercial' ); ?> -->
 <section id="contato" class="mod-contato <?php if (!is_home()): ?>
   page
 <?php endif ?>">
@@ -15,6 +15,7 @@
         <div class="form">
           <p style="padding: 0;">Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
           <form class="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
+            <input type="hidden" value="MadGo - Página contato" name="Assunto">
             <input type="hidden" value="Logotipo" name="Categoria">
             <label for="nome">Seu nome</label>
             <div class="input-group">
@@ -40,6 +41,11 @@
             </div>
             <div class="col-xs-12 col-md-4">
               <input type="submit" value="Orçamento" class="btn btn-custom1">
+            </div>
+            <div class="response">
+              <p style="display:none;" class="success">Mensagem enviada com sucesso!</p>
+              <p style="display:none;" class="error">Erro ao enviar mensagem.</p>
+              <p style="display:none;" class="waiting">Estamos enviando, aguarde!</p>
             </div>
           </form>
         </div>

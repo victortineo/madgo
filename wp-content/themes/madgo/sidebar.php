@@ -97,10 +97,8 @@
 	<div class="sidebar newsletter newsletter2">
 		<header><h1 class="titulo-quero-venda">Quer saber como atrair clientes e vender mais?</h1></header>
 		<strong class="sub-title-venda">Insira o seu endereço de email abaixo e aprenda conosco!</strong>
-		<form action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php"" method="POST" class="formContato  	form-quero-venda">
-            <input type="hidden" name="Lugar" value="MadGO" />
-            <input type="hidden" name="_next" value="<?php echo get_template_directory_uri() ?>/obrigado2.html" />
-            <input type="hidden" name="_subject" value="Saber sobre atrair cliente e vender na internet" />
+		<form action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php"" method="POST" class="formContato form-quero-venda">
+            <input type="hidden" value="Saber sobre atrair cliente e vender na internet" name="Assunto">
            	<div class="input-group">
 				<input type="text" placeholder="Nome" name="Nome" required>
 			</div>
@@ -108,11 +106,7 @@
 				<input type="email" placeholder="E-mail" name="E-mail" required>
 			</div>
 			<input value="QUERO APRENDER" type="submit" class="btn btn-custom1">
-			 <div id="mce-responses" class="mce-responses clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-	</form>
+		</form>
 	</div>
 	<div class="sidebar tags">
 		<header><h1>TAGS</h1></header>

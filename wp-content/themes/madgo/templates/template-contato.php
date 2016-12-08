@@ -23,7 +23,7 @@
             <?php if (is_single('servicos') || is_singular('portfolio')): ?>
             <input type="hidden" value="<?=$subtipo?>" name="Categoria">
             <?php endif ?>
-            <input type="hidden" value="Logotipo" name="Categoria">
+            <input type="hidden" value="MadGo - Quero um orçamento" name="Assunto">
             <label for="nome">Seu nome</label>
             <div class="input-group">
               <input type="text" name="Nome" id="nome" required>
