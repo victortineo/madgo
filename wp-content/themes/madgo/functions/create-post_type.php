@@ -59,7 +59,7 @@ function create_base() {
                 'name' => __( 'Serviços' ),
                 'singular_name' => __( 'Serviços' )
             ),
-            'taxonomies' => array('category'),
+            'taxonomies' => array('category', 'post_tag'),
             'menu_icon' => 'dashicons-feedback',
             'public' => true,
             'public'             => true,

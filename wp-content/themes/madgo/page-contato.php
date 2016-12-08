@@ -14,7 +14,7 @@
       <div class="col-xs-12 col-sm-8">
         <div class="form">
           <p style="padding: 0;">Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
-          <form id="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
+          <form class="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
             <input type="hidden" value="Logotipo" name="Categoria">
             <label for="nome">Seu nome</label>
             <div class="input-group">

@@ -5,7 +5,7 @@
     <div class="col-xs-12 col-sm-6">
       <img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/madgo-footer.jpg" alt="design by MadGO">
       <span>Todos os direitos reservados a MadGO.<br>
-      © 2013 - 2016</span>
+      © 2016</span>
     </div>
     <div class="col-xs-12 col-sm-6">
       <ul class="social">
@@ -14,9 +14,6 @@
         </li>
         <li class="facebook">
           <a href="https://www.facebook.com/MadGoodOnes" target="_blank">Facebook</a>
-        </li>
-        <li class="google">
-          <a href="https://plus.google.com/b/101364115676192305215/" target="_blank">Google</a>
         </li>
         <li class="linkedin">
           <a href="http://www.linkedin.com/company/MadGO" target="_blank">LinkedIn</a>
@@ -49,12 +46,13 @@
         <p>Receba nossa proposta comercial</p>
       </div>
       <div class="col-xs-6">
-        <form action="<?php bloginfo('url') ?>/contato" method="post">
+        <form action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php" method="post" class="formContato formNewsletter">
           <div class="form-group">
             <input required type="email" name="email" class="form-control" placeholder="Insira aqui seu e-mail">
             <input class="form-button" type="submit" value="ENVIAR">
           </div>
         </form>
+        <p id="form-text-send" class="sr-only">Cadastro enviado com sucesso! Aguarde novos conteúdos!</p>
         <!-- <button class="newsletter-bar-button"><i class="glyphicon glyphicon-remove"></i></button> -->
       </div>
     </div>

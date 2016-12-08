@@ -45,7 +45,7 @@ Template Name: Blog
 						<div class="post-excerpt">
 							<span class="day"><?php the_time('d') ?></span><br>
 							<span class="date"><?php the_time("M 'y") ?></span><br>
-							<span>por <b>MadGO</b></span>
+							<span>by <b>MadGO</b></span>
 						</div>
 					</div>
 					<div class="col-xs-9 col-sm-10">

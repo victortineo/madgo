@@ -10,12 +10,9 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
 <section class="content">
   <header class="page-header">
   <div class="container">
-    <?php $next_post = get_next_post(); ?>
-    <?php $prev_post = get_previous_post(); ?>
+    
     <h1>
-    <?php if (!empty( $prev_post )): ?><a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php _e(do_shortcode($prev_post->post_title));  ?> |</a><?php endif ?> 
     <span><?php the_title(); ?></span> 
-    <?php if (!empty( $next_post )): ?><a href="<?php echo get_permalink( $next_post->ID ); ?>">| <?php _e(do_shortcode($next_post->post_title)); ?></a><?php endif ?> 
     </h1>
 
     <?=get_field('resumo')?>
@@ -24,6 +21,12 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
   <div class="content-text">
     <div class="container">
       <?php the_content(); ?>
+      
+      <a href="http://madknow.com.br/madgo/#portfolio"><button class="btn btn-custom1 btn-portifolio-blog">Portifólio MadGO</button></a>
+
+      <?php 
+          the_tags( '<ul class="wp-list-tags">Tags:<br><li>', '</li><li>', '</li></ul>' ); 
+      ?>
     </div>
   </div>
 </section>
@@ -36,6 +39,9 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
 </div>
 <?php endif ?>
 
+<div class="container">
+
+</div>
 
 <!-- Contato -->
 <section id="contato" class="mod-contato page">

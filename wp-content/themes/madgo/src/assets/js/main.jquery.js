@@ -1,18 +1,27 @@
 $( document ).ready(function() {
 
-  var $Contato = $('#formContato');
-  var $waiting =  $('#formContato #response .waiting');
-  var $success =  $('#formContato #response .success');
-  var $error =  $('#formContato #response .error');
+  var $Contato = $('.formContato');
+  var $message = $('#form-text-send');
 
   $Contato.on('submit', function(event) {
     event.preventDefault();
+    var $waiting =  $(this).find('.waiting');
+    var $success =  $(this).find('.success'); 
+    var $error =  $(this).find('.error');
+    if ($(this).hasClass('formNewsletter')) {
+      var $this = $(this);
+      sessionStorage.setItem('newsletterBar', 'true');
+    }
+
     $waiting.css('display', 'block');
     $(this).ajaxSubmit({
       success: function(response) {
         $Contato[0].reset();
         $waiting.css('display', 'none');
         $success.css('display', 'block');
+        $newsletterBar.css('display', 'none');
+        $this.css('display', 'none');
+        $message.removeClass('sr-only');
       },
       error: function(response) {
         console.log(response);
@@ -23,8 +32,12 @@ $( document ).ready(function() {
     setTimeout(function(){
       $success.css('display', 'none');
       $error.css('display', 'none');
+      $message.addClass('sr-only');
+      $newsletterBar.css('display', 'none');
     }, 10000);
   });
+  
+
 
   var documentHeight = $(document).outerHeight() - 100,
   $window = $(window),
@@ -46,4 +59,9 @@ $( document ).ready(function() {
 
   $('#comercial').modal('show');
   
+  if (sessionStorage.newsletterBar == 'true') {
+      $newsletterBar.css('display', 'none');
+      $('.footer').css('padding-bottom','35px');
+  }
 });
+  
