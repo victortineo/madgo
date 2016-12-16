@@ -37,10 +37,10 @@
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post();
 		?>
 		<li class="row">
-			<div class="col-xs-8 col-sm-12 col-md-8 title">
+			<div class="recent-blog-title col-xs-8 col-sm-12 col-md-8 title">
 				<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
 			</div>
-			<div class="col-xs-4 col-sm-12 col-md-4 no-gutter bg-view pull-right" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
+			<div class="thumbs-blog col-xs-4 col-sm-12 col-md-3 no-gutter bg-view pull-right" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
 			<div class="views-count">
 				<span class="glyphicon glyphicon-eye-open"></span><span class="counts pull-right"><?php echo the_views();  ?></span>
 			</div>
@@ -106,6 +106,11 @@
 				<input type="email" placeholder="E-mail" name="E-mail" required>
 			</div>
 			<input value="QUERO APRENDER" type="submit" class="btn btn-custom1">
+			<div class="response">
+              <p style="display:none;" class="success">Mensagem enviada com sucesso!</p>
+              <p style="display:none;" class="error">Erro ao enviar mensagem.</p>
+              <p style="display:none;" class="waiting">Estamos enviando, aguarde!</p>
+            </div>
 		</form>
 	</div>
 	<div class="sidebar tags">

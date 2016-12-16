@@ -5,25 +5,27 @@ $(function () {
     $filter.on('click', loadOWL);
     var owl = $('#owl');
     var options = {
-        loop: true,
+        loop: false,
         margin: 0,
         nav: false,
         owl2row: true, // enable plugin
         owl2rowTarget: 'item',    // class for items in carousel div
         owl2rowContainer: 'owl2row-item', // class for items container
         owl2rowDirection: 'utd', // ltr : directions
-        items: 2,
+        items: 4,
         dots: false,
         responsive : {
+            // breakpoint from 0 up
             0 : {
-                items: 1,
-                loop: false
+                items : 1
             },
+            // breakpoint from 480 up
             480 : {
-                items: 2
+                items : 2
             },
+            // breakpoint from 768 up
             768 : {
-                items: 4
+                items : 4
             }
         }
     };

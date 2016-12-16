@@ -67,4 +67,4 @@ $( document ).ready(function() {
       $('.footer').css('padding-bottom','35px');
   }
 });
-  
+ 
