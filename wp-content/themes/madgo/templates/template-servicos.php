@@ -29,7 +29,13 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "design"): ?>
-							<li><a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'):?> href="<?php the_permalink(); ?>"<?php endif ?>><?php the_title(); ?></a></li>
+							<li> 
+							<?php if (get_field('mostrar_link') == 'não'): ?> 
+								<span><?php the_title(); ?></span>
+							<?php  else: ?> 
+								<a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'): ?> href="<?php the_permalink(); ?>"<?php endif; ?>><?php the_title(); ?></a> 
+							<?php endif; ?>
+							</li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>
@@ -43,7 +49,13 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "webdesign"): ?>
-							<li><a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'):?> href="<?php the_permalink(); ?>"<?php endif ?>><?php the_title(); ?></a></li>
+							<li>
+							<?php if (get_field('mostrar_link') == 'não'): ?> 
+								<span><?php the_title(); ?></span>
+							<?php  else: ?> 
+								<a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'): ?> href="<?php the_permalink(); ?>"<?php endif; ?>><?php the_title(); ?></a> 
+							<?php endif; ?>
+							</li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>
@@ -57,7 +69,13 @@
 					    	$categoria = get_field('categoria');
 					    ?>
 						<?php if ($categoria == "marketing"): ?>
-							<li><a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'):?> href="<?php the_permalink(); ?>"<?php endif ?>><?php the_title(); ?></a></li>
+							<li> 
+							<?php if (get_field('mostrar_link') == 'não'): ?> 
+								<span><?php the_title(); ?></span>
+							<?php  else: ?> 
+								<a title="<?php the_title(); ?>" <?php if(get_field('mostrar_link') != 'não'): ?> href="<?php the_permalink(); ?>"<?php endif; ?>><?php the_title(); ?></a> 
+							<?php endif; ?>
+							</li>
 						<?php endif; ?>
 						<?php endwhile; wp_reset_query(); ?>
 					</ul>

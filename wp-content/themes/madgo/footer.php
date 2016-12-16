@@ -26,7 +26,13 @@
 <!-- ./ FOOTER -->
 
 <div class="postit postit-fixed1 link-animation">
-<a href="#contato">
+<a href=<?php if (is_page('blog')) {
+     ?> "http://madknow.com.br/madgo/contato/" <?php   
+    } 
+    else {
+     ?> "#contato" <?php 
+    }
+    ?>>
   <img src="<?php echo get_template_directory_uri() ?>/dist/assets/img/quero_orcamento.png" alt="Quero um orçamento">
   </a>
 </div>
@@ -43,7 +49,7 @@
   <div class="container">
     <div class="row-fluid">
       <div class="col-xs-6">
-        <p>Receba nossa proposta comercial</p>
+        <p>Quero receber mais conteúdo</p>
       </div>
       <div class="col-xs-6">
         <form action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php" method="post" class="formContato formNewsletter">
@@ -88,7 +94,9 @@
       }
     }
   });
-});// READY 
+	var $ads = jQuery('.adsbygoogle').closest('[data-height]');
+	$ads.css('display', 'none!important');
+});// READY
 </script>
 </body>
 </html>

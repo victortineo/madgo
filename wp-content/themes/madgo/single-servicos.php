@@ -22,7 +22,9 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
     <div class="container">
       <?php the_content(); ?>
       
-      <a href="http://madknow.com.br/madgo/#portfolio"><button class="btn btn-custom1 btn-portifolio-blog">Portifólio MadGO</button></a>
+      <div class="text-center">
+        <a href="http://madknow.com.br/madgo/#portfolio" class="btn btn-custom1 btn-portifolio-blog">Portifólio MadGO</a>
+      </div>
 
       <?php 
           the_tags( '<ul class="wp-list-tags">Tags:<br><li>', '</li><li>', '</li></ul>' ); 

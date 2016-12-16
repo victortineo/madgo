@@ -613,7 +613,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 70px;
+  min-height: 40px;
 }
 .blog .sidebar.views .views-count {
   position: absolute;
@@ -876,6 +876,9 @@ img {
   display: block;
   padding: 15px 17px 0;
   font-size: 18px;
+}
+.recent-blog-title {
+  padding: 7px 0 !important;
 }
 .mod-contato {
   padding: 80px 0;
@@ -2069,6 +2072,12 @@ img {
 .mod-servicos .servicos-content a:hover {
   font-weight: 600;
   background-color: #e94647;
+}
+.mod-servicos .servicos-content span {
+  display: inline-block;
+  padding: 2.5px 10px;
+  font-weight: 300;
+  color: #fff;
 }
 .newsletter-bar {
   -webkit-transition: 0.2s all ease-in-out;
