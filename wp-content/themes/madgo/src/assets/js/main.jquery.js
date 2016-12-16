@@ -8,10 +8,7 @@ $( document ).ready(function() {
     var $waiting =  $(this).find('.waiting');
     var $success =  $(this).find('.success'); 
     var $error =  $(this).find('.error');
-    if ($(this).hasClass('formNewsletter')) {
-      var $this = $(this);
-      sessionStorage.setItem('newsletterBar', 'true');
-    }
+    var $this = $(this);
 
     $waiting.css('display', 'block');
     $(this).ajaxSubmit({
@@ -20,9 +17,10 @@ $( document ).ready(function() {
         $waiting.css('display', 'none');
         $success.css('display', 'block');
 
-        if ($(this).hasClass('formNewsletter')) {
+        if ($this.hasClass('formNewsletter')) {
           $this.css('display', 'none');
           $message.removeClass('sr-only');
+          sessionStorage.setItem('newsletterBar', 'true');
         }
 
       },
@@ -35,7 +33,7 @@ $( document ).ready(function() {
     setTimeout(function(){
       $success.css('display', 'none');
       $error.css('display', 'none');
-      if ($(this).hasClass('formNewsletter')) {
+      if ($this.hasClass('formNewsletter')) {
         $newsletterBar.css('display', 'none');
         $('.footer').css('padding-bottom','35px');
       }
@@ -69,4 +67,4 @@ $( document ).ready(function() {
       $('.footer').css('padding-bottom','35px');
   }
 });
-  
+ 

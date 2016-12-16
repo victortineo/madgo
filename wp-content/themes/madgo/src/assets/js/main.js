@@ -1,4 +1,14 @@
 ;(function() {
+	// Toggle Menu
+	// Vars
+	var $menu = document.querySelector('.navbar .menu');
+	var $menuCollapse = document.querySelector('.navbar .menu-collapse');
+	// Events
+	$menuCollapse.addEventListener("click", menuToggle, false);
+	// Functions
+	function menuToggle(e) {
+		$menu.classList.toggle('active');
+	}
 	// Toggle Modal
 	// Vars
 	var $modal = document.querySelector('.modalContact');
