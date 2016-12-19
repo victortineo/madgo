@@ -41,12 +41,11 @@
 				<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
 			</div>
 			<div class="thumbs-blog col-xs-4 col-sm-12 col-md-3 no-gutter bg-view pull-right" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
-			<div class="views-count">
-				<span class="glyphicon glyphicon-eye-open"></span><span class="counts pull-right"><?php echo the_views();  ?></span>
-			</div>
+				<div class="views-count">
+					<span class="glyphicon glyphicon-eye-open"></span><span class="counts pull-right"><?php echo the_views();  ?></span>
+				</div>
 			</div>
 		</li>
-		<br>
 		<?php endwhile; ?>
 		</ul>
 	</div>

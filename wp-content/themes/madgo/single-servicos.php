@@ -58,7 +58,8 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
       <div class="col-xs-12 col-sm-8">
         <div class="form">
           <p>Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
-          <form action="#" method="post">
+          <form class="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
+            <input type="hidden" name="Tipo" value="<?=$subtipo?>">
             <label for="nome">Seu nome</label>
             <div class="input-group">
               <input type="text" name="Nome" id="nome" required>
@@ -83,6 +84,11 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
             </div>
             <div class="col-xs-12 col-md-4">
               <input type="submit" value="Orçamento" class="btn btn-custom1">
+            </div>
+            <div class="response">
+              <p style="display:none;" class="success">Mensagem enviada com sucesso!</p>
+              <p style="display:none;" class="error">Erro ao enviar mensagem.</p>
+              <p style="display:none;" class="waiting">Estamos enviando, aguarde!</p>
             </div>
           </form>
         </div>

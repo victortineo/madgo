@@ -16,14 +16,15 @@ foreach($_POST as $campo => $valor){
 // PHP MAILER
 require 'templates/template.php';
 require 'PHPMailer/PHPMailerAutoload.php';
+require_once 'secrets.php';
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
-$from = "developer@madknow.com.br";
+$from = "contato@madgo.com.br";
 $fromName = 'Site MadGO';
 
-$host = 'srv136.prodns.com.br';
-$username = 'developer@madknow.com.br';
-$password = 'INt-12133@M4Dg#';
+$host = $hostEmail;
+$username = $usernameEmail;
+$password = $passwordName;
 $port = 465;
 $secure = 'ssl';                             // Enable verbose debug output
 
@@ -43,8 +44,6 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = $assunto;
 $mail->Body    = $template;
 
-if(!$mail->send()) {
-    echo 'Erro ao enviar mensagem. Tente novamente!';
-} else {
+if($mail->send()) {
     echo 'Mensagem enviada com sucesso!';
 }
