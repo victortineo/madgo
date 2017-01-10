@@ -880,6 +880,20 @@ img {
 .recent-blog-title {
   padding: 7px 0 !important;
 }
+.conteudo-blog span strong,
+.conteudo-blog h1,
+.conteudo-blog h2,
+.conteudo-blog h3 {
+  display: block;
+  margin-bottom: 10px;
+}
+.conteudo-blog span strong li,
+.conteudo-blog h1 li,
+.conteudo-blog h2 li,
+.conteudo-blog h3 li {
+  list-style-type: disc;
+  margin-left: 15px;
+}
 .mod-contato {
   padding: 80px 0;
   background-color: #e94647;

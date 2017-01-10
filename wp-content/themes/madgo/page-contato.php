@@ -40,7 +40,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-md-4">
-              <input type="submit" value="Orçamento" class="btn btn-custom1">
+              <input type="submit" value="Orçamento" class="btn btn-custom1 g-recaptcha" data-sitekey="6LcFPxEUAAAAAFHtG5sYtiS0UW4tOPBacNzGTrru" data-callback="YourOnSubmitFn">
             </div>
             <div class="response">
               <p style="display:none;" class="success">Mensagem enviada com sucesso!</p>
