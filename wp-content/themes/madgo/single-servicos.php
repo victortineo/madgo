@@ -119,9 +119,7 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
           <p>Conte-nos o que você precisa, apresentaremos uma solução e um orçamento!</p>
 
           <form class="formContato" method="post" action="<?php echo get_template_directory_uri(); ?>/functions/sendEmail.php">
-
             <input type="hidden" name="Tipo" value="<?=$subtipo?>">
-
             <label for="nome">Seu nome</label>
 
             <div class="input-group">
@@ -180,6 +178,11 @@ $mostrar_portfolio = get_field('mostrar_portfolio');
 
               <p style="display:none;" class="waiting">Estamos enviando, aguarde!</p>
 
+            </div>
+            <div class="response">
+              <p style="display:none;" class="success">Mensagem enviada com sucesso!</p>
+              <p style="display:none;" class="error">Erro ao enviar mensagem.</p>
+              <p style="display:none;" class="waiting">Estamos enviando, aguarde!</p>
             </div>
           </form>
 
